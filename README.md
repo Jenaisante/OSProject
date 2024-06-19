@@ -1,13 +1,13 @@
 # OSProject Running Containers for Application Development
 
-Group Name: Error 404. 
+Group Name: **Error 404**. 
 
-Section: 2. 
+Section: **2**. 
 
 Team Mates:
-1. MUHAMMAD DANIAL BIN SHAMSIL OMAR and 2216993
-2. WAN MOHAMAD HARIZ BIN WAN MARZUKI and 2213623
-3. MUHAMMAD BIN ZAHIDI and 2217551
+1. **MUHAMMAD DANIAL BIN SHAMSIL OMAR** and **2216993**
+2. **WAN MOHAMAD HARIZ BIN WAN MARZUKI** and **2213623**
+3. **MUHAMMAD BIN ZAHIDI** and **2217551**
 
 ## Rules
 1. You are allowed to have **3 group** members. *Exception* is allowed **IFF (if and only if)** you are allowed to have 4 group members if you are a **multinational** or a **multigender** group. 
@@ -24,8 +24,8 @@ Team Mates:
 
 ***Questions:***
 
-1. What is the link of the fork OSProject in your repository. ***(1 mark)*** (https://github.com/Jenaisante/OSProject/edit/main/README.md).
-2. How many files and folders are in this repository. ***(1 mark)*** There are 6 files inside folder named images and a single filed named README.md .
+1. What is the link of the fork OSProject in your repository. ***(1 mark)*** **https://github.com/Jenaisante/OSProject/edit/main/README.md**
+2. How many files and folders are in this repository. ***(1 mark)*** **There are 6 files inside folder named images and a single filed named README.md**
 
 
 ## Exploring github codespaces
