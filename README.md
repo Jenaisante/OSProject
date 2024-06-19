@@ -35,7 +35,7 @@ Team Mates:
 3. Click on ***New codespace***.
 4. Choose your own OSProject repository to start your codespace.
 
- <img src="./images/ownnewcodespace.png" width="50%">
+ <img src="./images/newcodespace.png" width="50%">
 
 5. Once you have created you codespace, you will see the following. You might already be familiar with this, since it will look similar to VSCode. 
 
