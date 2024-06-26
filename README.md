@@ -77,9 +77,11 @@ codespace
 Look at the TERMINAL tab. Run the following commands and provide the output here. 
 
 1. Run the command **pwd** . ***(1 mark)***
-   /workspaces/OSProject.
+
+   __/workspaces/OSProject__.
 
 2. Run the command **cat /etc/passwd** . ***(1 mark)*** 
+```
     root:x:0:0:root:/root:/bin/bash
     daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
     bin:x:2:2:bin:/bin:/usr/sbin/nologin
@@ -105,8 +107,9 @@ Look at the TERMINAL tab. Run the following commands and provide the output here
     messagebus:x:104:105::/nonexistent:/usr/sbin/nologin
     codespace:x:1000:1000::/home/codespace:/bin/bash
     sshd:x:105:65534::/run/sshd:/usr/sbin/nologin.
-
+```
 3. Run the command **df** . ***(1 mark)*** 
+```
     Filesystem     1K-blocks     Used Available Use% Mounted on
     overlay         32847680 10381204  20772376  34% /
     tmpfs              65536        0     65536   0% /dev
@@ -114,8 +117,9 @@ Look at the TERMINAL tab. Run the following commands and provide the output here
     /dev/root       30298176 22452932   7828860  75% /vscode
     /dev/sda1       46127956       88  43752292   1% /tmp
     /dev/loop3      32847680 10381204  20772376  34% /workspaces.
-
+```
 4. Run the command **du** . ***(1 mark)***
+```
     4       ./.git/branches
     8       ./.git/objects/1b
     8       ./.git/objects/83
@@ -210,24 +214,27 @@ Look at the TERMINAL tab. Run the following commands and provide the output here
     2700    ./.git
     1972    ./images
     4696    .
-
+```
 5. Run the command **ls** . ***(1 mark)***
-    README.md  images.
+    __README.md  images__.
 
 6. Run the command **ls -asl** . ***(1 mark)*** 
+```
     total 40
     4 drwxrwxrwx+ 4 codespace root  4096 Jun 16 08:41 .
     4 drwxr-xrwx+ 5 codespace root  4096 Jun 16 08:41 ..
     4 drwxrwxrwx+ 9 codespace root  4096 Jun 16 08:48 .git
     24 -rw-rw-rw-  1 codespace root 21623 Jun 16 10:24 README.md
     4 drwxrwxrwx+ 2 codespace root  4096 Jun 16 08:41 images.
-
+```
 7. Run the command **free -h** . ***(1 mark)***
+```
     total        used        free      shared  buff/cache   available
     Mem:          7.7Gi       1.4Gi       1.4Gi        63Mi       5.0Gi       6.0Gi
     Swap:            0B          0B          0B
-
+```
 8. Run the command **cat /proc/cpuinfo** . ***(1 mark)***
+```
     processor       : 0
     vendor_id       : AuthenticAMD
     cpu family      : 25
@@ -283,19 +290,20 @@ Look at the TERMINAL tab. Run the following commands and provide the output here
     cache_alignment : 64
     address sizes   : 48 bits physical, 48 bits virtual
     power management:
-
+```
 9. Run the command **top** and type **q** to quit. ***(1 mark)***.
 
     <img src="./images/top.png" width="70%">
 
 10. Run the command **uname -a**. ***(1 mark)***.
-    Linux codespaces-f1ad6c 6.5.0-1021-azure #22~22.04.1-Ubuntu SMP Tue Apr 30 16:08:18 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+    __Linux codespaces-f1ad6c 6.5.0-1021-azure #22~22.04.1-Ubuntu SMP Tue Apr 30 16:08:18 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux__
   
 11. What is the available free memory in the system. ***(1 mark)*** .
+```
         total        used        free      shared  buff/cache   available
     Mem:        8119872     2024508      293924       67584     5801440     5705368
     Swap:             0           0           0
-
+```
 12. What is the available disk space mounted on /workspace. ***(1 mark)*** __Fill answer here__.
 13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** __Fill answer here__.
 14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** .
@@ -364,10 +372,12 @@ f65be1987f84   debian    "bash"    19 minutes ago   Exited (137) 18 seconds ago 
 ***Questions:***
 
 1. Are files in the container persistent. Why not?. ***(1 mark)*** 
-Files in a container are generally not persistent by default. This is because containers are designed to be ephemeral and stateless, meaning that once a container is stopped or destroyed, any data written to its filesystem is lost.
+
+    __Files in a container are generally not persistent by default. This is because containers are designed to be ephemeral and stateless, meaning that once a container is stopped or destroyed, any data written to its filesystem is lost__.
 
 2. Can we run two, or three instances of debian linux? . ***(1 mark)*** 
-Yes, it is possible to run two or three instances of Debian Linux.
+
+    __Yes, it is possible to run two or three instances of Debian Linux__.
 
 
 ## Running your own container with persistent storage
@@ -387,14 +397,17 @@ At the terminal, create a new directory called **myroot**, and run a instance of
 
 ***Questions:***
 
-1. Check the permission of the files created in myroot, what user and group is the files created in docker container on the host virtual machine? . ***(2 mark)*** __Fill answer here__.
+1. Check the permission of the files created in myroot, what user and group is the files created in docker container on the host virtual machine? . ***(2 mark)***
+
+    __user=root group=root__.
+
 2. Can you change the permission of the files to user codespace.  You will need this to be able to commit and get points for this question. ***(2 mark)***
 ```bash
 //use sudo and chown
 sudo chown -R codespace:codespace myroot
 
 ```
-*** __Fill answer here__.***
+__user=codespace group=codespace__. 
 
 ## You are on your own, create your own static webpage
 
@@ -420,9 +433,17 @@ docker run --detach -v /workspaces/OSProject/webpage:/usr/local/apache2/htdocs/ 
 
 ***Questions:***
 
-1. What is the permission of folder /usr/local/apache/htdocs and what user and group owns the folder? . ***(2 mark)*** __Fill answer here__.
-2. What port is the apache web server running. ***(1 mark)*** __Fill answer here__.
-3. What port is open for http protocol on the host machine? ***(1 mark)*** __Fill answer here__.
+1. What is the permission of folder /usr/local/apache/htdocs and what user and group owns the folder? . ***(2 mark)***
+    
+    __PERMISSION=drwxrwxrwx+ USER=1000 GROUP=1000__.
+
+2. What port is the apache web server running. ***(1 mark)*** 
+    
+    __80__.
+
+3. What port is open for http protocol on the host machine? ***(1 mark)***
+    
+    __8080__.
 
 ## Create SUB Networks
 
@@ -441,11 +462,32 @@ docker run -itd --net rednet --name c2 busybox sh
 ```
 ***Questions:***
 
-1. Describe what is busybox and what is command switch **--name** is for? . ***(2 mark)*** __Fill answer here__.
-2. Explore the network using the command ```docker network ls```, show the output of your terminal. ***(1 mark)*** __Fill answer here__.
-3. Using ```docker inspect c1``` and ```docker inspect c2``` inscpect the two network. What is the gateway of bluenet and rednet.? ***(1 mark)*** __Fill answer here__.
-4. What is the network address for the running container c1 and c2? ***(1 mark)*** __Fill answer here__.
-5. Using the command ```docker exec c1 ping c2```, which basically tries to do a ping from container c1 to c2. Are you able to ping? Show your output . ***(1 mark)*** __Fill answer here__.
+1. Describe what is busybox and what is command switch **--name** is for? . ***(2 mark)***
+
+    __BusyBox: BusyBox is a lightweight and versatile Unix-like toolset that combines small versions of many common UNIX utilities into a single small executable. It is often used in Docker containers due to its small size and wide range of included tools__.
+    __--switch: This option in Docker (--name) allows you to specify a custom name for the container when you create it. It's optional but useful for easily identifying and managing containers__.
+
+2. Explore the network using the command ```docker network ls```, show the output of your terminal. ***(1 mark)***
+
+```bash
+NETWORK ID     NAME      DRIVER    SCOPE
+f81626020bdc   bluenet   bridge    local
+01b28da334e3   bridge    bridge    local
+41340715aff9   host      host      local
+890c7f1e32c8   none      null      local
+94eaf17222e2   rednet    bridge    local
+```
+3. Using ```docker inspect c1``` and ```docker inspect c2``` inscpect the two network. What is the gateway of bluenet and rednet.? ***(1 mark)***
+
+    __C1=172.23.0.1 C2=172.25.0.1__.
+
+4. What is the network address for the running container c1 and c2? ***(1 mark)*** 
+
+    __C1=172.23.0.0/16 C2=172.25.0.0/16__.
+
+5. Using the command ```docker exec c1 ping c2```, which basically tries to do a ping from container c1 to c2. Are you able to ping? Show your output . ***(1 mark)***
+
+    __ping: bad address 'c2'__
 
 ## Bridging two SUB Networks
 1. Let's try this again by creating a network to bridge the two containers in the two subnetworks
@@ -457,8 +499,29 @@ docker exec c1 ping c2
 ```
 ***Questions:***
 
-1. Are you able to ping? Show your output . ***(1 mark)*** __Fill answer here__.
-2. What is different from the previous ping in the section above? ***(1 mark)*** __Fill answer here__.
+1. Are you able to ping? Show your output . ***(1 mark)***
+
+```
+PING c2 (172.21.0.3): 56 data bytes
+64 bytes from 172.21.0.3: seq=0 ttl=64 time=0.119 ms
+64 bytes from 172.21.0.3: seq=1 ttl=64 time=0.077 ms
+64 bytes from 172.21.0.3: seq=2 ttl=64 time=0.068 ms
+64 bytes from 172.21.0.3: seq=3 ttl=64 time=0.082 ms
+64 bytes from 172.21.0.3: seq=4 ttl=64 time=0.085 ms
+64 bytes from 172.21.0.3: seq=5 ttl=64 time=0.069 ms
+64 bytes from 172.21.0.3: seq=6 ttl=64 time=0.099 ms
+64 bytes from 172.21.0.3: seq=7 ttl=64 time=0.075 ms
+64 bytes from 172.21.0.3: seq=8 ttl=64 time=0.076 ms
+64 bytes from 172.21.0.3: seq=9 ttl=64 time=0.118 ms
+64 bytes from 172.21.0.3: seq=10 ttl=64 time=0.063 ms
+64 bytes from 172.21.0.3: seq=11 ttl=64 time=0.070 ms
+64 bytes from 172.21.0.3: seq=12 ttl=64 time=0.094 ms
+64 bytes from 172.21.0.3: seq=13 ttl=64 time=0.091 ms
+64 bytes from 172.21.0.3: seq=14 ttl=64 time=0.080 ms
+```
+2. What is different from the previous ping in the section above? ***(1 mark)***
+
+    __The connection between c1 and c2 is establish__.
 
 ## Intermediate Level (10 marks bonus)
 
@@ -601,8 +664,13 @@ You have now set up a Node.js application in a Docker container on nodejsnet net
 
 ***Questions:***
 
-1. What is the output of step 5 above, explain the error? ***(1 mark)*** __Fill answer here__.
-2. Show the instruction needed to make this work. ***(1 mark)*** __Fill answer here__.
+1. What is the output of step 5 above, explain the error? ***(1 mark)***
+
+    __cannot get__.
+
+2. Show the instruction needed to make this work. ***(1 mark)***
+
+    __To make this work, you need to ensure the mytable table is populated with some data.__.
 
 
 
