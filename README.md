@@ -360,7 +360,7 @@ d6668ef6ad49   debian    "bash"    42 hours ago   Exited (255) 30 minutes ago   
 
 3. Keep note of the name used by your container, this is usually given random names unless you specify your own name. Now run a bash command on the container. Make sure you use the name of your container instead of the one shown here. 
 ```bash
-docker exec -i -t romantic_jackson /bin/bash
+docker exec -i -t sleepy_taussig /bin/bash
 ```
 
 4. Create a file on the container. First you must make sure you are in the bash command prompt of the container. The container is new, and does not have any software other than the debian OS. To create a new file, you will need an editor installed. In the bash shell of the container, run the package manager apt-get to install nano text editor. 
@@ -379,25 +379,25 @@ root@f65be1987f84:~# nano helloworld.txt
 
 6. Stop the container and run **docker ps -a**, and restart the container again. Is your file in the container still available?
 ```bash 
-@joeynor ➜ /workspaces/OSProject (main) $ docker stop romantic_jackson
+@joeynor ➜ /workspaces/OSProject (main) $ docker stop sleepy_taussig
 
 @joeynor ➜ /workspaces/OSProject (main) $ docker ps -a
 CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS                        PORTS     NAMES
-f65be1987f84   debian    "bash"    19 minutes ago   Exited (137) 18 seconds ago             romantic_jackson
+f65be1987f84   debian    "bash"    19 minutes ago   Exited (137) 18 seconds ago             sleepy_taussig
 
-@joeynor ➜ /workspaces/OSProject (main) $ docker restart romantic_jackson
+@joeynor ➜ /workspaces/OSProject (main) $ docker restart sleepy_taussig
 ```
 
 7. Stop the container and delete the container. What happened to your helloworld.txt?
 
 ```bash 
-@joeynor ➜ /workspaces/OSProject (main) $ docker stop romantic_jackson
+@joeynor ➜ /workspaces/OSProject (main) $ docker stop sleepy_taussig
 
 @joeynor ➜ /workspaces/OSProject (main) $ docker ps -a
 CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS                        PORTS     NAMES
-f65be1987f84   debian    "bash"    19 minutes ago   Exited (137) 18 seconds ago             romantic_jackson
+f65be1987f84   debian    "bash"    19 minutes ago   Exited (137) 18 seconds ago             sleepy_taussig
 
-@joeynor ➜ /workspaces/OSProject (main) $ docker rm romantic_jackson
+@joeynor ➜ /workspaces/OSProject (main) $ docker rm sleepy_taussig
 ```
 
 ***Questions:***
