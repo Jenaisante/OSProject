@@ -305,13 +305,43 @@ Look at the TERMINAL tab. Run the following commands and provide the output here
     Swap:             0           0           0
 ```
 12. What is the available disk space mounted on /workspace. ***(1 mark)*** __Fill answer here__.
+@Mad1224 ➜ /workspaces/OSProject (main) $ /workspace
+bash: /workspace: No such file or directory
+
 13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** __Fill answer here__.
+@Mad1224 ➜ /workspaces/OSProject (main) $ uname -r
+6.5.0-1022-azure
+@Mad1224 ➜ /workspaces/OSProject (main) $ uname -m
+x86_64
+
 14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** .
     The command "ls" lists the files and directories in the current directory, while "ls -a" lists all files and directories, including hidden ones. "ls -asl" lists all files and directories in a long format, showing their permissions, ownership, size, and modification time.
 
 15. What is the TLB size of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
+@Mad1224 ➜ /workspaces/OSProject (main) $ grep -i tlb /proc/cpuinfo
+TLB size        : 2560 4K pages
+TLB size        : 2560 4K pages
+
 16. What is the CPU speed of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
+@Mad1224 ➜ /workspaces/OSProject (main) $ grep "cpu MHz" /proc/cpuinfo
+cpu MHz         : 3128.330
+cpu MHz         : 3158.351
+
 17. What is the top running process that consumes the most CPU cycles. ***(1 mark)*** __Fill answer here__.
+@Mad1224 ➜ /workspaces/OSProject (main) $ top -b -o +%CPU | head -n 12
+top - 08:20:12 up 25 min,  0 users,  load average: 0.34, 0.19, 0.29
+Tasks:  18 total,   1 running,  17 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  3.4 sy,  0.0 ni, 96.6 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   7929.6 total,    222.9 free,   1380.2 used,   6326.4 buff/cache
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.   6167.8 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+      1 codespa+  20   0    1136    640    640 S   0.0   0.0   0:00.05 docker-init
+      7 codespa+  20   0    7236   1664   1664 S   0.0   0.0   0:00.02 sleep
+     48 root      20   0   12196   3352   2432 S   0.0   0.0   0:00.00 sshd
+    905 root      20   0 1983432  86892  52608 S   0.0   1.1   0:00.25 dockerd
+    913 root      20   0 1798832  49100  30848 S   0.0   0.6   0:00.32 containerd
+    
 
 ## Running your own container instance.
 
